@@ -1,0 +1,20 @@
+<?php
+session_start();
+if (!isset($_SESSION['utilisateur'])) {
+    header('location: ../connexion.php');
+}
+    $id = $_POST['id'];
+    $qty = $_POST['qty'];
+    $idUtilisateur = $_SESSION['utilisateur']['id'];
+    if(!empty($id) && !empty($qty)){
+        if(!isset($_SESSION['panier'][$idUtilisateur])){
+            $_SESSION['panier'][$idUtilisateur] = [];
+        }
+    
+        $_SESSION['panier'][$idUtilisateur][$id] = $qty;
+    echo "<pre>";
+        var_dump($_SESSION['panier']);
+    echo "</pre>";
+    }else{
+        header( header: "location: product.php?id=$id");
+    }
