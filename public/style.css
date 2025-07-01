@@ -1,6 +1,6 @@
 /****** Main Styling ******/
 
-body {
+/* body {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   color: #222;
@@ -39,4 +39,36 @@ input#button {
   padding: 20px;
   width: 60%;
   min-width: 400px;
+} */
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 30px;
+  background-color: #f5f5f5;
+}
+
+.container {
+  background-color: white;
+  padding: 20px;
+  margin: auto;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input[type="file"] {
+  margin: 10px 0;
+}
+
+.footer {
+  margin-top: 20px;
+  color: #666;
+}
+
+#result {
+  margin-top: 20px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  color: #333;
 }
